@@ -3,15 +3,18 @@ html(lang="en")
   head
     title= pageTitle
   body
-    include includes/modal.pug
-    include includes/header.pug
-    #container.col
-      if youAreUsingPug
-        p You are amazing
-      else
-        p Get on it!
-      p.
-        Pug is a terse and simple templating language with a
-        strong focus on performance and powerful features.
-      div
-        img(src= require("./img/img.png"))
+    .col-md-6
+      #container
+        if youAreUsingPug
+          p You are amazing
+        else
+          p Get on it!
+        p.
+          Pug is a terse and simple templating language with a
+          strong focus on performance and powerful features.
+        div
+          img.img-responsive(src= require("./img/img.png"))
+    .col-md-6
+      include includes/header.pug
+      include includes/modal.pug
+      
